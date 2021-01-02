@@ -1,0 +1,467 @@
+
+@import url('../css/fonts.css');
+
+html, body
+{
+    margin:0;
+    box-sizing: border-box;
+    background-color:#3f4954;
+    overflow-x: hidden;
+}
+
+:root
+{
+    --text-gray:#3f4954;
+    --text-light:#686666da;
+    --bg-color:#0f0f0f;
+    --white:#ffffff;
+    --mid-night:#104f55;
+
+    --sky:linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+     
+     --abel:'Abel','cursive';
+     --anton:'Anton','cursive';
+     --josefin:'Josefin','cursive';
+     --lexend:'Lexend','cursive';
+     --livvic:'Livvic','cursive';
+}
+/*---------global--------*/
+a
+{
+  text-decoration:none;
+  color:navy;
+}
+
+.flex-row
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+h3
+{
+   font-size: 1rem;
+   color: gray;
+}
+
+ul
+{
+    list-style-type: none;
+}
+/*-------end global----*/
+/*---------nav-menu------*/
+.nav
+{   
+    padding:0 2rem;
+    background-color:grey;
+    height: 0rem;
+    min-height: 10vh;
+    overflow: hidden;
+    transition: height 1s ease-in-out;
+}
+
+.nav .flex-row
+{
+    justify-content: space-between;
+}
+
+.nav .nav-item
+{
+    display: flex;
+    margin: 0rem;
+}
+
+.nav .nav-item .nav-link
+{
+    padding: 1.6rem 1rem ;
+    font-size: 1rem;
+    position: relative;
+}
+
+/*.nav .nav-item .nav-link:hover
+{ background-color: var(--mid-night);}
+*/
+.nav .nav-item .nav-link:hover a
+{
+    color:white;
+}
+
+.nav .toggle-collapse
+{
+    position: absolute;
+    top:0%;
+    width: 90%;
+    cursor:pointer;
+    display: none;
+}
+.collapse
+{
+    height: 40rem;
+}
+.nav .toggle-collapse .toggle-icon
+{   display: flex;
+    justify-content: flex-end;
+    padding: 1.7rem 0;
+}
+.nav .toggle-collapse .toggle-icon i
+{
+    font-size: 1.4rem;
+    color:blue;
+}
+.nav .social
+{
+    padding: 1.4rem 0rem;
+}
+.nav .social i
+{
+    padding: 0rem 0.2rem;
+}
+.nav .social i:hover
+{
+    color:blueviolet;
+}
+.nav .nav-brand a
+{
+    display: block;
+    padding: 1rem 0rem;
+    font-family: cursive;
+    font-size: 1.4rem;
+}
+/*----xx--------nav-menu-----------xx-----*/
+
+/*-----Main Site Content-----------*/
+
+/*--------Home section----------*/
+/*
+main .site-title
+{
+    background: url(../assests/bg3.jpg);
+    background-size: cover;
+    height: 50vh;
+    display: flex;
+    justify-content:flex-end;
+
+}
+
+main .site-title .site-background
+{  
+    padding:5rem 5rem;
+    text-align:center;
+    color:grey;
+
+}
+main .site-title h3
+{
+    margin: .3rem;
+}*/
+/*----xx----Home section-----xx-----*/
+
+/*---------skill section---------*/
+main .skill
+{   /*background:lightslategray;*/
+    margin-top: 0;
+}
+
+main .skill .card{
+    background:url(../assests/bg2.jpg);
+    background-size: cover;
+    height: 50vh;
+    position: relative;
+    margin:10px 20px;
+    padding: 5vh;
+    
+    display:flex;
+   justify-content: left;
+}
+main .skill .card .skill-pic
+{  margin-top: 0px;
+   max-width: 200px;
+    flex:end;
+}
+main .skill .card .skill-pic img
+{   margin-top: 0;
+    max-width: 100%;
+}
+main .skill .card .skill-content
+{   margin-top: 0;
+    margin-left: 20px;
+}
+main .skill .card .skill-content h3
+{
+     color:blue;
+     font-size: 1.4rem;
+}
+main .skill .card .skill-content h4
+{
+    color: lightgray;
+    font-size: 1rem;
+}
+
+/*--------xx-----skill section-----xx-----*/
+
+/*-----blog carousal--------*/
+main .blog
+{
+    background: url(../assests/bg4.jpg);
+    height: 75vh;
+    width: 100%;
+}
+
+main .blog .blog-post{
+    padding-top: 0rem;
+}
+
+main .blog .blog-content{
+    display: flex;
+    flex-direction: column;
+    width:75%;
+    margin:3rem 2rem;
+    box-shadow: 0 10px 10px var(--text-gray);
+}
+
+section .container .owl-nav{
+    position: absolute;
+    margin: 0 auto;
+    width:100%;
+}
+.owl-nav .owl-prev .owl-nav-prev,
+.owl-nav .owl-next .owl-nav-next{
+   color:green;
+   background: transparent;
+   font-size: 4rem;
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: transparent;
+    color:blue;
+}
+/*--xx-----blog carousal-----xx---*/
+
+/*--------xx----main site content---xx-----*/
+/*---footer---*/
+main .footer
+{
+    background: var(--mid-night);
+    height:8vh;
+    padding: 5px;
+    text-align: center;
+    font-size: 1.1rem;
+}
+main .footer h4
+{   color: lightgrey;}
+
+main .footer i{
+    color: red;
+}
+
+/*-------media query-----------*/
+
+/**----------max-width=950px----------------*/
+@media only screen and (max-width: 1050px)
+{   .nav .nav-menu,.nav-item
+    {
+        flex-direction:column;
+    }
+    
+    .nav .toggle-collapse
+    {
+        display: initial;
+    }
+
+    main .skill .card
+    {   padding: 4vh !important;
+        flex-direction:flex !important;
+        max-width: 90% !important;
+        height: 42vh !important;
+    }
+    main .skill .card .skill-pic
+    { 
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+        max-width: 40% !important;
+    }
+    main .skill .card .skill-content
+    {
+        margin-left: 10px !important;
+       
+    }
+    main .skill .card .skill-content h3
+    {
+        font-size: 1.2rem !important;
+    }
+    main .skill .card .skill-content h4
+    {
+        font-size: 0.8rem;
+    }
+    main .footer
+    {
+        height:6vh
+    }
+    main .footer h4{
+        font-size: 1 rem;
+    }
+}
+/*--------------------end of max-width=1050-----------*/
+
+/*----------max-width=990px----------------*/
+@media only screen and (max-width: 990px)
+{
+    .nav .nav-menu,.nav-item
+    {
+        flex-direction: column;
+    }
+    
+    .nav .toggle-collapse
+    {
+        display: initial;
+    }
+
+    main .skill .card
+    {   padding-left:4vh !important;
+        padding-right:4vh !important;
+        flex-direction:column !important;
+        width: 90% !important;
+        height: 66vh !important;
+    }
+
+    main .skill .card .skill-pic
+    {  margin-left: 0px !important;
+        margin-right: 0px !important;
+        max-width: 26vh !important;
+       /*max-height: 50% !important;*/
+    }
+    main .skill .card .skill-content
+    {    padding-left: 0px !important;
+         padding-right:0px !important;
+         padding-top: 0vh !important;
+         margin:0;
+        /*font-size: 0.2rem !important;*/
+    }
+    main .blog
+    {
+        height:70vh !important;
+    }
+   /* main .blog .blog-content{
+        display: flex !important;
+        flex-direction: column;
+        width:80%;
+        margin:1rem 1rem;
+        box-shadow: 0 10px 10px var(--text-gray);
+    }*/
+}
+/*--------------------end of max-width=768-----------*/
+
+
+
+/*----------max-width=600px----------------*/
+@media only screen and (max-width: 560px)
+{
+    .nav .nav-menu,.nav-item
+    {
+        flex-direction: column;
+    }
+    
+    .nav .toggle-collapse
+    {
+        display: initial;
+    }
+
+    main .skill .card
+    {   padding:3vh !important;
+        flex-direction:column !important;
+        width: 90% !important;
+        height: 82vh !important;
+        margin-right: 5px;
+        margin-left: 5px;
+        
+    }
+
+   main .skill .card .skill-pic
+    {
+        max-width: 25vh !important;
+    
+       /* max-height: 50% !important;*/
+    }
+    main .skill .card .skill-content
+    {    padding-left: 0px !important;
+         padding-right:10px !important;
+         padding-top: 0vh !important;
+          margin-right:5px;
+        font-size: 0.8rem !important;
+    }
+    main .blog
+    {
+        height:65vh !important;
+    }
+    main .blog .blog-content{
+        display:flex !important;
+        flex-direction: column;
+        justify-content: center;
+        width:55%;
+        margin:2rem 5rem;
+        box-shadow: 0 10px 10px var(--text-gray);
+        
+    }
+  
+    main .footer h4{
+        font-size: 0.8rem;
+    }
+}
+/*--------------------end of max-width=600-----------*/
+
+@media only screen and (max-width: 360px)
+{
+    .nav .nav-menu,.nav-item
+    {
+        flex-direction: column;
+    }
+    
+    .nav .toggle-collapse
+    {
+        display: initial;
+    }
+
+    main .skill .card
+    {   padding:3vh !important;
+        flex-direction:column !important;
+        width: 90% !important;
+        height: 90vh !important;
+        margin-right: 5px;
+        margin-left: 5px;
+        
+    }
+
+   main .skill .card .skill-pic
+    {
+        max-width: 25vh !important;
+    
+       /* max-height: 50% !important;*/
+    }
+    main .skill .card .skill-content
+    {    padding-left: 0px !important;
+         padding-right:10px !important;
+         padding-top: 0vh !important;
+          margin-right:5px;
+        font-size: 0.8rem !important;
+    }
+    main .blog
+    {
+        height:65vh !important;
+    }
+    main .blog .blog-content{
+        display:flex !important;
+        flex-direction: column;
+        justify-content: center;
+        width:55%;
+        margin:2rem 5rem;
+        box-shadow: 0 10px 10px var(--text-gray);
+        
+    }
+  
+    main .footer h4{
+        font-size: 0.8rem;
+    }
+}
+
+/*---------media query end-----------*/
